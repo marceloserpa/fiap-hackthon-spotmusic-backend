@@ -19,4 +19,4 @@ COPY app.py db.py requirements.txt /home/myapp/
 RUN pip install --user --trusted-host pypi.python.org -r requirements.txt
 
 # Garante que será iniciado a aplicação.
-CMD ["gunicorn", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
