@@ -53,3 +53,6 @@ jobs:
           service: ${{ vars.GOOGLE_MYAPP }}-homolog-backend
           image:   ${{ vars.GOOGLE_ARTIFACT }}/${{ vars.GOOGLE_PROJECT_ID }}/${{ vars.GOOGLE_REPONAME }}/${{ vars.GOOGLE_MYAPP }}:latest
           flags: '--allow-unauthenticated'
+
+      - name: Test Homolog
+        run: 'curl "${{ steps.homolog-deploy.outputs.url }}"'
