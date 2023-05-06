@@ -55,4 +55,4 @@ jobs:
           flags: '--allow-unauthenticated'
 
       - name: Test Homolog
-        run: 'curl "${{ steps.homolog-deploy.outputs.url }}"'
+        run: 'curl "${{ steps.homolog-deploy-backend.outputs.url }}"'
