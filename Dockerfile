@@ -10,6 +10,7 @@ WORKDIR /home/myapp
 
 #Definindo o local onde o binário do gunicorn é instalado
 ENV PATH="/home/myapp/.local/bin:${PATH}"
+ENV PORT=8080
 
 # Copiar os arquivos da pasta local para dentro do container
 COPY app.py db.py requirements.txt /home/myapp/
